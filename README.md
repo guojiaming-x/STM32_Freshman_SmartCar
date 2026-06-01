@@ -1,7 +1,15 @@
 # 🚗 STM32 智能小车 — 大一项目
 
 > 大一第一个 STM32 项目，全部代码手敲完成。
-> 从零开始学 GPIO、定时器、PWM、串口、中断，一行一行敲出来的。
+> 从零开始学 GPIO、定时器、PWM、串口、中断。
+
+## 🎬 演示视频
+
+<video src="assets/06901879e92779fa5499cf2f8aaafcc3.mp4" controls width="100%"></video>
+
+<video src="assets/b48830afc0961f4f23df6b9e64aef081.mp4" controls width="100%"></video>
+
+<video src="assets/1097d779d1402ed2d957143a4aeca3c2.mp4" controls width="100%"></video>
 
 ## 📷 实物照片
 
@@ -11,51 +19,34 @@
 
 ![小车照片3](assets/小车照片_03.jpg)
 
-## 🎬 演示视频
-
-> 视频上传到 B站 后，替换下面的链接
-
-```markdown
-[ B站视频链接 ]
-```
-
 ## ⚙️ 功能
 
 | 功能 | 实现 |
 |------|------|
 | 📱 **蓝牙遥控** | `E`前进 `H`后退 `L`左转 `R`右转 `S`停止 `X`旋转 |
 | 🛤️ **5路循迹** | 红外传感器阵列，结构体封装，黑线识别自动纠偏 |
-| 📏 **超声波避障** | HC-SR04 实时测距，距离 < 阈值自动停车 |
+| 📏 **超声波避障** | HC-SR04 实时测距 |
 
 ## 📁 代码结构
 
 ```
 User/
-├── USART.c/h      📱 蓝牙串口指令解析（switch-case 状态机）
+├── USART.c/h      📱 蓝牙串口指令解析
 ├── qudong.c/h     🔧 电机驱动（goForward/goBack/goLeft/goRight/stop/旋转/左旋/右旋/慢左）
 ├── xunji.c/h      🛤️ 5路循迹传感器读取 + 自动纠偏逻辑
-└── bizhang.c/h    📏 超声波测距（Trig触发 → Echo计时 → 距离换算）
+└── bizhang.c/h    📏 超声波测距
 ```
 
 ## 🔩 硬件
 
 | 模块 | 说明 |
 |------|------|
-| STM32F103C8T6 | 主控（ARM Cortex-M3） |
-| HC-05 | 蓝牙串口模块 |
-| HC-SR04 | 超声波测距模块 |
-| 5路红外传感器 | 循迹灰度识别 |
-| L298N | 双路电机驱动 |
+| STM32F103C8T6 | 主控 |
+| HC-05 | 蓝牙模块 |
+| HC-SR04 | 超声波测距 |
+| 5路红外传感器 | 循迹 |
+| L298N | 电机驱动 |
 
 ## 🔨 打开方式
 
-**Keil MDK5** → 打开 `MDK-ARM/A.uvprojx` → 编译 → 烧录
-
-或 **STM32CubeIDE** → Import → 选择 `A.ioc` → Generate Code → 编译
-
-## 📅 时间线
-
-- 大一上 | 焊接 PCB、调试电机
-- 大一上 | 蓝牙通信调通、第一个遥控指令响应
-- 大一上 | 循迹算法调试、5路传感器标定
-- 大一上 | 项目完成 ✅
+Keil MDK5 打开 `MDK-ARM/A.uvprojx` → 编译 → 烧录
