@@ -5,11 +5,11 @@
 
 ## 🎬 演示视频
 
-<video src="assets/06901879e92779fa5499cf2f8aaafcc3.mp4" controls width="100%"></video>
+[▶️ 点击播放：演示视频1](assets/06901879e92779fa5499cf2f8aaafcc3.mp4)
 
-<video src="assets/b48830afc0961f4f23df6b9e64aef081.mp4" controls width="100%"></video>
+[▶️ 点击播放：演示视频2](assets/b48830afc0961f4f23df6b9e64aef081.mp4)
 
-<video src="assets/1097d779d1402ed2d957143a4aeca3c2.mp4" controls width="100%"></video>
+[▶️ 点击播放：演示视频3](assets/1097d779d1402ed2d957143a4aeca3c2.mp4)
 
 ## 📷 实物照片
 
