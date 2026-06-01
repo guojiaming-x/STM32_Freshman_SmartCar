@@ -1,0 +1,26 @@
+# IDE
+.vscode/
+*.uvguix.*
+*.uvoptx
+*.scvd
+
+# Build
+Debug/
+OBJ/
+*.o
+*.d
+*.crf
+*.axf
+*.hex
+*.bin
+*.elf
+*.lst
+*.map
+*.htm
+*.dep
+*.lnp
+*.sct
+
+# OS
+.DS_Store
+Thumbs.db
